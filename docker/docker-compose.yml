@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  application:
+    build:
+      dockerfile: ./docker/Dockerfile
+      context: ../
+    image: sentiment-analyzer
+    container_name: sentiment-analyzer
+    ports:
+      - "5000:5000"

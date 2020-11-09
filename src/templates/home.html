@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sentiment Analysis</title>
+  
+  <style>
+	.button {
+	  display: inline-block;
+	  width: 100%;
+	  height: 100%;
+	  font-size: 18px;
+	  cursor: pointer;
+	  text-align: center;
+	  text-decoration: none;
+	  outline: none;
+	  color: #fff;
+	  background-color: #FFDCBC;
+	  border: none;
+	  border-radius: 15px;
+	  box-shadow: 0 9px #999;
+	}
+
+	.button:hover {background-color: #3e8e41}
+
+	.button:active {
+	  background-color: #3e8e41;
+	  box-shadow: 0 5px #666;
+	  transform: translateY(4px);
+	}
+</style>
+</head>
+<body style="background-color:#BACAFF">
+
+	<div style="position: fixed;top: 35%;left: 35%; height: 25%; width:30%; background-color:#D6EEFF; border-radius: 5%;">
+		<form method="POST" action="/api/v1/sentiment-analyzer">
+			<div style="margin:auto; width:50%; text-align:center; margin-top:5%;">
+				<label for="sentence" style="font-size: 1.5em; font-style: bold;" >Your sentence : </label>
+			</div>
+			</br>
+			</br>
+			<div style="margin:auto; width:90%; text-align:center">
+				<input type="texte" name="sentence" style="width:100%;">
+			</div>
+			</br>
+			</br>
+			<div style="padding-top: 3%; padding-left: 10%; padding-right: 10%; ">
+				<input class="button" type="submit" value="Analyze" style="color : #666666;" >
+			</div>
+			
+		</form>
+		
+		<div style= "text-align:center;position: absolute; bottom: 5%; margin-left: 5%; font-weight: bold; font-size: 20px;">
+			{{ sentiment }}
+		</div>
+	
+	
+	</div>
+
+
+  
+
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

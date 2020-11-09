@@ -1,0 +1,6 @@
+Flask
+joblib
+numpy==1.19.3 # windows runtime error sanity check
+scipy
+scikit-learn
+pytest
